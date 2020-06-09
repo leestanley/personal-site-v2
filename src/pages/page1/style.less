@@ -1,0 +1,29 @@
+@import './../../styles/mixins.less';
+
+.page1 {
+  .vertical_center();
+
+  background-image: url("../../assets/page1_line.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0px -11vw;
+  height: 90vh;
+
+  .home_items {
+    .vertical_center();
+    margin-top: 10vh;
+
+    .trails-text {
+      -webkit-text-fill-color: white;
+      -webkit-text-stroke-width: .2rem;
+      -webkit-text-stroke-color: black;
+      text-align: center;
+      font-size: 12.5rem;
+      font-weight: 500;
+      line-height: 5rem;
+    }
+
+
+  }
+}
