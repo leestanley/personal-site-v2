@@ -1,37 +1,58 @@
 import React from 'react';
-import { useTrail, animated } from 'react-spring';
+import {
+  MediumOutlined,
+  GithubOutlined,
+  LinkedinOutlined,
+} from '@ant-design/icons';
 
 import './style.less';
 
-const items = ['STAN', 'LEY', 'LEE'];
-const config = { mass: 5, tension: 2000, friction: 200 };
+import Navbar from '../../components/navbar';
+import Tower from '../../assets/tower.svg';
 
 function Page1() {
-
-  const trail = useTrail(items.length, {
-    config,
-    opacity: 1 ,
-    x: 0,
-    height: 200,
-    from: { opacity: 0, x: 150, height: 0 },
-  });
-
   return (
     <div className="page page1">
-      <div className="home_items">
-        <div>
-          {trail.map(({ x, height, ...rest }, index) => (
-            <animated.div
-              key={items[index]}
-              className="trails-text"
-              style={{
-                ...rest,
-                transform: x.interpolate((x) => `translate3d(0,${x}px,0)`),
-              }}
+      <Navbar />
+      <div className="content-area">
+        <div className="col">
+          <div className="t-wrap">
+            <div>
+              <h3>hi my name is</h3>
+              <h1>stanley lee</h1>
+            </div>
+            <p>
+              i’m a third-year at UC San Diego currently interning at ServiceNow
+              as a technical program management intern. my website is under
+              construction, but feel free to check out my socials!
+            </p>
+          </div>
+        </div>
+        <div className="t-col">
+          <img className="tower-pic" src={Tower} alt="tower" />
+          <div className="icons">
+            <a
+              href="https://github.com/leestanley"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <animated.div style={{ height }}>{items[index]}</animated.div>
-            </animated.div>
-          ))}
+              <GithubOutlined className="icon" />
+            </a>
+            <a
+              href="https://medium.com/@leestanleysg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <MediumOutlined className="icon" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/leestanleysg/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <LinkedinOutlined className="icon" />
+            </a>
+          </div>
         </div>
       </div>
     </div>

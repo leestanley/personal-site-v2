@@ -1,9 +1,30 @@
 .navbar {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding: 30px 2.5%;
+
   .nav_wrapper {
-    padding: 1%;
     display: flex;
     justify-content: space-between;
-    height: 5vh;
+
+    li {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      display: inline-block;
+      padding: 0px 20px;
+
+      &:hover {
+        transition-timing-function: ease-in;
+        opacity: .8;
+      }
+    }
+  } 
+
+  @media only screen and (max-width: 900px) {
+    justify-content: center;
+    font-size: 1.2rem;
   }
 
 }

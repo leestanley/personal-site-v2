@@ -1,29 +1,102 @@
 @import './../../styles/mixins.less';
+@import './../../styles/vars.less';
 
 .page1 {
-  .vertical_center();
+  overflow: hidden;
 
-  background-image: url("../../assets/page1_line.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 0px -11vw;
-  height: 90vh;
+  .content-area {
+    display: flex;
+    height: 100%;
 
-  .home_items {
-    .vertical_center();
-    margin-top: 10vh;
+    .col {
+      .t-wrap {
+        padding: 20vh 0px 15vh 5vw;
 
-    .trails-text {
-      -webkit-text-fill-color: white;
-      -webkit-text-stroke-width: .2rem;
-      -webkit-text-stroke-color: black;
-      text-align: center;
-      font-size: 12.5rem;
-      font-weight: 500;
-      line-height: 5rem;
+        h1 {
+          font-size: 5rem;
+          font-weight: 600;
+          background: -webkit-linear-gradient(45deg, #1C338E, #F859D6);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          margin-bottom: 5vh;
+        }
+
+        h3 {
+          font-size: 3rem;
+        }
+
+        p {
+          font-family: 'Roboto', sans-serif;
+          width: 33%;
+          font-weight: 300;
+          font-size: 1.75rem;
+        }
+      }
+
+      @media only screen and (max-width: 900px) {
+        .t-wrap {
+          padding: 3vh;
+
+          h1 {
+            font-size: 4rem;
+          }
+
+          h3 {
+            font-size: 3rem;
+          }
+
+          p {
+            display: none;
+          }
+        }
+      }
     }
 
+    .t-col {
+      .tower-pic {
+        position: fixed;
+        right: 20%;
+        bottom: 0%;
+      }
 
+      .icons {
+        position: fixed;
+        right: 2.5%;
+        bottom: 2.5%;
+
+        .icon {
+          padding: 0px 8px;
+          color: @blue;
+          font-size: 36px;
+
+          &:hover {
+            transition-timing-function: ease-in;
+            opacity: .8;
+          }
+        }
+      }
+
+      @media only screen and (max-width: 900px) {
+        .icons {
+          right: 0;
+          left: 0;
+          margin-right: auto;
+          margin-left: auto;
+          text-align: center;
+
+          .icon {
+            color: white;
+          }
+        }
+
+        .tower-pic {
+          right: 0;
+          bottom: calc(100vh - 135vh);
+          left: 0;
+          margin-right: auto;
+          margin-left: auto;
+        }
+      }
+    }
   }
 }
