@@ -15,7 +15,7 @@
         h1 {
           font-size: 5rem;
           font-weight: 600;
-          background: -webkit-linear-gradient(45deg, #1C338E, #F859D6);
+          background: -webkit-linear-gradient(-272deg, #1C338E, #F859D6);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           margin-bottom: 5vh;
@@ -56,7 +56,12 @@
       .tower-pic {
         position: fixed;
         right: 20%;
-        bottom: 0%;
+        bottom: calc(100vh - 110vh);
+        z-index: -1;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
       }
 
       .icons {
@@ -91,12 +96,20 @@
 
         .tower-pic {
           right: 0;
-          bottom: calc(100vh - 135vh);
           left: 0;
+          bottom: calc(100vh - 135vh);
           margin-right: auto;
           margin-left: auto;
         }
       }
     }
   }
+
+
+  @media only screen and (max-width: 900px) {
+    .content-area {
+      justify-content: center;
+    }
+  }
+
 }

@@ -21,7 +21,7 @@ function Navbar() {
             <li>projects</li>
           </a>
           <a
-            href="https://drive.google.com/file/d/1cEU7myTYPqcKQYlQvNRfn6wLqVFRTdLb/view"
+            href="mailto:stanleylee91776@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
           >
