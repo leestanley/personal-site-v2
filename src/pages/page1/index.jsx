@@ -22,9 +22,9 @@ function Page1() {
               <h1>stanley lee</h1>
             </div>
             <p>
-              i’m a third-year at UC San Diego currently interning at ServiceNow
-              as a technical program management intern. my website is under
-              construction, but feel free to check out my socials!
+              i’m a fourth-year at UC San Diego currently studying design
+              and interaction. my website is under construction, 
+              but feel free to check out my socials!
             </p>
           </div>
         </div>
